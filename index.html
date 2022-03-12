@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="en">
-  <head>
+
+<head>
     <base target="_blank">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -10,123 +11,122 @@
     <link rel="stylesheet" href="./css/style.css">
     <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=default'></script>
     <title>HyperInverter - Dinh et al.,2021</title>
-  </head>
-  <body class="bg-light">
+</head>
+
+<body class="bg-light">
     <div class="container container-small pb-5">
-      <div class="row pt-4 pb-3 justify-content-center">
-        <div class="col-12 pt-1">
-          <h2 class="text-center">HyperInverter: Improving StyleGAN Inversion via Hypernetwork</h2>
-          <div class="text-center font-weight-normal h5">
-              <a class="pr-5" href="https://di-mi-ta.github.io/">Tan M. Dinh</a>
-              <a class="pr-5" href="https://sites.google.com/site/anhttranusc/">Anh Tran</a>
-              <a class="pr-5" href="https://sites.google.com/site/rangmanhonguyen/">Rang Nguyen</a>
-              <a href="https://sonhua.github.io/">Binh-Son Hua</a>
-              
-              <br>
+        <div class="row pt-4 pb-3 justify-content-center">
+            <div class="col-12 pt-1">
+                <h2 class="text-center">HyperInverter: Improving StyleGAN Inversion via Hypernetwork</h2>
+                <div class="text-center font-weight-normal h5">
+                    <a class="pr-5" href="https://di-mi-ta.github.io/">Tan M. Dinh</a>
+                    <a class="pr-5" href="https://sites.google.com/site/anhttranusc/">Anh Tran</a>
+                    <a class="pr-5" href="https://sites.google.com/site/rangmanhonguyen/">Rang Nguyen</a>
+                    <a href="https://sonhua.github.io/">Binh-Son Hua</a>
 
-              <div class="text-center font-weight-normal h5 pt-2">
-                <span class="pr-5">VinAI Research, Vietnam</span>
-              </div>
+                    <br>
 
-              <div class="text-center font-weight-normal h5 pt-2">
-                <p style="color: #1d41e4" class="pr-5">arxiv preprint, 2021</p>
-              </div> 
+                    <div class="text-center font-weight-normal h5 pt-2">
+                        <span class="pr-5">VinAI Research, Vietnam</span>
+                    </div>
 
-              <div class="row pt-4 pb-3 justify-content-center">
+                    <div class="text-center font-weight-normal h5 pt-2">
+                        <p style="color: #e41d1d" class="pr-5">CVPR 2022</p>
+                    </div>
 
-                <a class="pr-5" href="https://arxiv.org/abs/2112.00719">
-                  <image src="images/paper_logo.png" height="120px">
-                  <h5>Paper</h5>
-                </a>
+                    <div class="row pt-4 pb-3 justify-content-center">
 
-                <a class="pr-5" href="">
-                  <image src="images/github_pad.png" height="120px">
-                  <h5>Code</h5>
-                  <p><font size="2">(coming soon)</font></p>
-                </a>
+                        <a class="pr-5" href="https://arxiv.org/abs/2112.00719">
+                            <image src="images/paper_logo.png" height="120px">
+                                <h5>Paper</h5>
+                        </a>
 
-                <a class="pr-5" href="">
-                  <image src="images/colab_favicon.png" height="120px">
-                  <h5>Demo</h5>
-                  <p><font size="2">(coming soon)</font></p>
-                </a>
+                        <a class="pr-5" href="">
+                            <image src="images/github_pad.png" height="120px">
+                                <h5>Code</h5>
+                                <p>
+                                    <font size="2">(coming soon)</font>
+                                </p>
+                        </a>
 
-              </div>
+                        <a class="pr-5" href="">
+                            <image src="images/colab_favicon.png" height="120px">
+                                <h5>Demo</h5>
+                                <p>
+                                    <font size="2">(coming soon)</font>
+                                </p>
+                        </a>
+
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
 
-    <hr>
+        <hr>
 
-    <div class="row">
-      <div class="col-12">
-        <h3>Abstract</h3>
-        <p class="text-justify">Real-world image manipulation has achieved fantastic progress in recent years as a result of the exploration and utilization of GAN latent spaces. GAN inversion is the first step in this pipeline, which aims to map the real image to the latent code faithfully. Unfortunately, the majority of existing GAN inversion methods fail to meet at least one of the three requirements listed below: high reconstruction quality, editability, and fast inference. We present a novel two-phase strategy in this research that fits all requirements at the same time. In the first phase, we train an encoder to map the input image to StyleGAN2 W space, which was proven to have excellent editability but lower reconstruction quality. In the second phase, we supplement the reconstruction ability in the initial phase by leveraging a series of hypernetworks to recover the missing information during inversion. These two steps complement each other to yield high reconstruction quality thanks to the hypernetwork branch and excellent editability due to the inversion done in the W space. Our method is entirely encoder-based, resulting in extremely fast inference. Extensive experiments on two challenging datasets demonstrate the superiority of our method.</p>
-      </div>
-    </div>
-
-    <hr>
-
-    <div class="row">
-      <div class="col-12">
-        <h3>Recent Updates</h3>
-        <p>
-          <ul style="list-style-type:none">
-            <li><input type="checkbox" disabled="disabled" /> <label> Release source code (upon approval from the company). </label></li> 
-            <li><input type="checkbox" disabled="disabled" /> <label> Release the pre-trained models.</label></li>    
-            <li><input type="checkbox" disabled="disabled" /> Release the Colab notebook for demo.</label></li>                                
-          </ul>
-        </p>
-      </div>
-    </div>
-
-    <hr>
-
-    <div class="row">
-      <div class="col-12">
-        <h3>Method</h3>
-        <img src="./images/hyper_inverter_method.png" style="width:100%;">
-        <p>Our method contains <strong>two</strong> sequential phases: (1) We first train an encoder \(E_{1}\) to encode the input image \(x\) to a content code \(w\) in \(\mathcal{W}\)-space; \(w\) represents the main semantics of the image, therefore used in editing later. The output image of this phase is  \(\hat{x}_{w}\). (2) We further regress the residual weights to update the generator to faithfully reconstruct the input details. First, we use another encoder \(E_{2}\) and a fusion operator to extract the appearance code \(h\) from the input image \(x\) and the initial image \(\hat{x}_{w}\), where \(L\) is the number of style layers of StyleGAN. Then, we employ a series of hypernetworks to embed the appearance code \(h\) to the generator \(G\) by predicting the residual weights \(\Delta\theta\). The final reconstructed image \(\hat{x}\) is generated by \(G\) with updated weights \(\hat{\theta} = \theta + \Delta\theta\) and \(w\) content code from Phase I.</p>
-      </div>
-    </div>
-
-    <hr>
-
-    <div class="row">
-      <div class="col-12">
-        <h3>Results</h3>
-        <br/>
-        <h4 class="text-center">Inversion and Editing</h4>
-        <br/>
         <div class="row">
-        <img src="./images/input_opt_edit.png" style="width:20%;margin-left:10%">
-        <img src="./images/comparison_with_opt_edit.gif" style="width:60%">
+            <div class="col-12">
+                <h3>Abstract</h3>
+                <p class="text-justify">Real-world image manipulation has achieved fantastic progress in recent years as a result of the exploration and utilization of GAN latent spaces. GAN inversion is the first step in this pipeline, which aims to map the real image to the
+                    latent code faithfully. Unfortunately, the majority of existing GAN inversion methods fail to meet at least one of the three requirements listed below: high reconstruction quality, editability, and fast inference. We present a novel
+                    two-phase strategy in this research that fits all requirements at the same time. In the first phase, we train an encoder to map the input image to StyleGAN2 W space, which was proven to have excellent editability but lower reconstruction
+                    quality. In the second phase, we supplement the reconstruction ability in the initial phase by leveraging a series of hypernetworks to recover the missing information during inversion. These two steps complement each other to yield
+                    high reconstruction quality thanks to the hypernetwork branch and excellent editability due to the inversion done in the W space. Our method is entirely encoder-based, resulting in extremely fast inference. Extensive experiments on
+                    two challenging datasets demonstrate the superiority of our method.</p>
+            </div>
         </div>
-        <br/>
-        <div class="row">
-        <img src="./images/input_enc_edit.png" style="width:20%;margin-left:10%">
-        <img src="./images/comparison_with_enc_edit.gif" style="width:60%">
-        </div>
-        <br/>
-        <br/>
-        <br/>
-        <h4 class="text-center">Real-world Image Interpolation</h4>
-        <br/>
-        <div class="row">
-        <img src="./images/input_1_image_interpolation.png" style="width:20%;margin-left:0%">
-        <img src="./images/real_image_interpolation.gif" style="width:60%">
-        <img src="./images/input_2_image_interpolation.png" style="width:20%;margin-left:0%">
-        </div>
-      </div>
-    </div>
 
-    <hr>
+        <hr>
 
-    <div class="row">
-      <div class="col-12">
-        <h3>Citation</h3>
-      </div>
-      <pre><code>
+        <div class="row">
+            <div class="col-12">
+                <h3>Method</h3>
+                <img src="./images/hyper_inverter_method.png" style="width:100%;">
+                <p>Our method contains <strong>two</strong> sequential phases: (1) We first train an encoder \(E_{1}\) to encode the input image \(x\) to a content code \(w\) in \(\mathcal{W}\)-space; \(w\) represents the main semantics of the image, therefore
+                    used in editing later. The output image of this phase is \(\hat{x}_{w}\). (2) We further regress the residual weights to update the generator to faithfully reconstruct the input details. First, we use another encoder \(E_{2}\) and
+                    a fusion operator to extract the appearance code \(h\) from the input image \(x\) and the initial image \(\hat{x}_{w}\), where \(L\) is the number of style layers of StyleGAN. Then, we employ a series of hypernetworks to embed the
+                    appearance code \(h\) to the generator \(G\) by predicting the residual weights \(\Delta\theta\). The final reconstructed image \(\hat{x}\) is generated by \(G\) with updated weights \(\hat{\theta} = \theta + \Delta\theta\) and \(w\)
+                    content code from Phase I.</p>
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="row">
+            <div class="col-12">
+                <h3>Results</h3>
+                <br/>
+                <h4 class="text-center">Inversion and Editing</h4>
+                <br/>
+                <div class="row">
+                    <img src="./images/input_opt_edit.png" style="width:20%;margin-left:10%">
+                    <img src="./images/comparison_with_opt_edit.gif" style="width:60%">
+                </div>
+                <br/>
+                <div class="row">
+                    <img src="./images/input_enc_edit.png" style="width:20%;margin-left:10%">
+                    <img src="./images/comparison_with_enc_edit.gif" style="width:60%">
+                </div>
+                <br/>
+                <br/>
+                <br/>
+                <h4 class="text-center">Real-world Image Interpolation</h4>
+                <br/>
+                <div class="row">
+                    <img src="./images/input_1_image_interpolation.png" style="width:20%;margin-left:0%">
+                    <img src="./images/real_image_interpolation.gif" style="width:60%">
+                    <img src="./images/input_2_image_interpolation.png" style="width:20%;margin-left:0%">
+                </div>
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="row">
+            <div class="col-12">
+                <h3>Citation</h3>
+            </div>
+            <pre><code>
     @article{dinh2021hyperinverter,
         title={HyperInverter: Improving StyleGAN Inversion via Hypernetwork},
         author={Tan M. Dinh and Anh Tuan Tran and Rang Nguyen and Binh-Son Hua},
@@ -134,17 +134,18 @@
         year={2021}
     }
       </code></pre>
-    </div>
+        </div>
 
-    <!-- Visit tracker -->
-    <td>
-      <br>
-      <div style="display:none;">
-        <p>
-          <a href="http://www.clustrmaps.com/map/Di-mi-ta.github.io/HyperInverter/" title="Visit tracker for Di-mi-ta.github.io/HyperInverter/"><img src="//www.clustrmaps.com/map_v2.png?d=ZfKjJasJ2d3kyeLZ4PqCLOgfbFEc7VCFZazst44OqO4" /></a>
-        </p>
-      </div>
-    </td>
+        <!-- Visit tracker -->
+        <td>
+            <br>
+            <div style="display:none;">
+                <p>
+                    <a href="http://www.clustrmaps.com/map/Di-mi-ta.github.io/HyperInverter/" title="Visit tracker for Di-mi-ta.github.io/HyperInverter/"><img src="//www.clustrmaps.com/map_v2.png?d=ZfKjJasJ2d3kyeLZ4PqCLOgfbFEc7VCFZazst44OqO4" /></a>
+                </p>
+            </div>
+        </td>
 
-  </body>
+</body>
+
 </html>
