@@ -1,4 +1,4 @@
-# HyperInverter
-The project page for HyperInverter
+# HyperInverter: Improving StyleGAN Inversion via Hypernetwork (CVPR 2022)
+The project page for the paper: HyperInverter: Improving StyleGAN Inversion via Hypernetwork (CVPR 2022)
 
-Website: https://di-mi-ta.github.io/HyperInverter/
+Visit: https://di-mi-ta.github.io/HyperInverter/
